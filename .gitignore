@@ -1,0 +1,12 @@
+# Private keys
+.ssh/
+.gpg/
+
+# Cache
+.cache/
+.local/share/Trash/
+
+# Sensitive
+.netrc
+.config/aws/credentials
+
