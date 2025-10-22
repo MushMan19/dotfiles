@@ -24,7 +24,7 @@
     <value type="string" value="computer:///"/>
   </property>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,135,50,50,792,50,50,514,50,50,80,50,472"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,135,50,50,792,50,50,402,50,50,80,50,280"/>
   <property name="last-restore-tabs" type="bool" value="true"/>
   <property name="misc-recursive-permissions" type="string" value="THUNAR_RECURSIVE_PERMISSIONS_ASK"/>
   <property name="misc-exec-shell-scripts-by-default" type="string" value="THUNAR_EXECUTE_SHELL_SCRIPT_ASK"/>
@@ -32,7 +32,7 @@
   <property name="misc-use-csd" type="bool" value="true"/>
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="last-tabs-left" type="array">
-    <value type="string" value="file:///home/mush/.config"/>
+    <value type="string" value="file:///usr/share/sddm/themes/sddm-astronaut-theme/Themes"/>
   </property>
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
@@ -40,4 +40,5 @@
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="last-window-width" type="int" value="720"/>
   <property name="last-window-height" type="int" value="829"/>
+  <property name="last-details-view-column-order" type="string" value="THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_SIZE_IN_BYTES,THUNAR_COLUMN_LOCATION,THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_TYPE,THUNAR_COLUMN_GROUP,THUNAR_COLUMN_MIME_TYPE,THUNAR_COLUMN_DATE_CREATED,THUNAR_COLUMN_OWNER,THUNAR_COLUMN_PERMISSIONS,THUNAR_COLUMN_DATE_ACCESSED,THUNAR_COLUMN_RECENCY,THUNAR_COLUMN_DATE_DELETED"/>
 </channel>
