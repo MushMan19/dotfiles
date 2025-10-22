@@ -1,0 +1,257 @@
+
+@define-color theme_base_color rgba(0,0,0,0);
+@define-color theme_unfocused_base_color rgba(0,0,0,0);
+@define-color insensitive_base_color rgba(0,0,0,0);
+
+@define-color theme_bg_color rgba(0,128,255,0.5);
+@define-color theme_unfocused_bg_color rgba(0,128,255,0.5);
+@define-color insensitive_bg_color rgba(0,128,255,0.5);
+@define-color theme_selected_bg_color rgba(0,128,255,0.5);
+@define-color theme_unfocused_selected_bg_color rgba(0,128,255,0);
+
+@define-color theme_fg_color rgba(255,255,255,1);
+@define-color theme_unfocused_fg_color rgba(255,255,255,1);
+@define-color insensitive_fg_color rgba(255,255,255,1);
+@define-color theme_selected_fg_color rgba(255,255,255,1);
+@define-color theme_unfocused_selected_fg_color rgba(255,255,255,1);
+
+@define-color theme_text_color rgba(255,255,255,1);
+@define-color theme_unfocused_text_color rgba(255,255,255,1);
+
+@define-color borders rgba(255,255,255,1);
+@define-color unfocused_borders rgba(255,255,255,1);
+
+@define-color content_view_bg rgba(0,0,0,0);
+@define-color unfocused_insensitive_color rgba(0,0,0,0);
+
+@define-color warning_color @warning_color_breeze;
+@define-color error_color @error_color_breeze;
+@define-color success_color @success_color_breeze;
+
+
+/* Global override */
+* {
+  color: rgba(255,255,255,1);
+  background-image: none;
+}
+*:backdrop {
+  color: rgba(255,255,255,1);
+  background-image: none;
+}
+
+.background,
+.background:backdrop {
+  background-color: rgba(0,0,0,0.6);
+}
+
+window,
+window:backdrop {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 2px;
+}
+
+decoration,
+decoration:backdrop {
+  margin: 0;
+  box-shadow: none;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+button,
+button:backdrop,
+button.flat,
+button.flat:backdrop,
+button.sidebar-button,
+button.sidebar-button:backdrop {
+  background-color: rgba(0,0,0,0);
+  background-image: none;
+}
+
+button.suggested-action,
+button.suggested-action:backdrop {
+  background-color: rgba(0,0,0,0.6);
+}
+
+button:disabled {
+  background-color: rgba(0,0,0,0);
+}
+
+button * {
+  text-shadow: none;
+}
+
+.sidebar,
+.sidebar:backdrop {
+  background-color: rgba(0,0,0,0);
+}
+
+dialog.background,
+dialog.background:backdrop {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Gedit / VTE terminals */
+list,
+list:backdrop,
+stack viewport list,
+stack viewport list:backdrop,
+.gedit-side-panel-paned statusbar,
+.gedit-side-panel-paned statusbar:backdrop {
+  background-color: rgba(0,0,0,0);
+}
+
+notebook tab label,
+notebook tab:checked label,
+notebook tab label:backdrop,
+notebook tab:checked label:backdrop {
+  color: rgba(255,255,255,1);
+}
+
+vte-terminal,
+vte-terminal:backdrop {
+  background-color: rgba(0,0,0,0.6);
+}
+
+label,
+label:backdrop {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0);
+}
+
+label:disabled,
+label:disabled:backdrop {
+  color: rgba(128,128,128,1);
+}
+
+.view,
+.view:backdrop,
+.view *,
+.view *:backdrop,
+.view text,
+.view text:backdrop,
+textview text,
+textview text:backdrop {
+  background-color: rgba(0,0,0,0);
+  color: rgba(255,255,255,1);
+}
+
+iconview,
+iconview:backdrop,
+notebook scrolledwindow,
+notebook scrolledwindow:backdrop,
+notebook viewport {
+  background-color: rgba(0,0,0,0);
+}
+
+spinbutton,
+spinbutton:backdrop,
+entry,
+entry:backdrop,
+.inline-toolbar,
+toolbar {
+  background-color: rgba(0,0,0,0);
+}
+
+notebook,
+notebook > stack,
+notebook > stack:not(:only-child),
+notebook > stack:not(:only-child):backdrop,
+notebook > header,
+notebook > header:backdrop {
+  background-color: rgba(0,0,0,0);
+}
+
+paned separator,
+paned separator.vertical,
+paned separator:backdrop,
+paned separator.vertical:backdrop {
+  background-color: rgba(255,255,255,1);
+}
+
+paned > separator,
+paned > separator:backdrop {
+  background-color: transparent;
+}
+
+.app-notification,
+.app-notification:backdrop {
+  background-color: rgba(0,0,0,0.6);
+}
+
+window headerbar:first-child,
+window headerbar:first-child:backdrop,
+window headerbar:last-child,
+window headerbar:last-child:backdrop,
+.background .titlebar,
+.background .titlebar:backdrop,
+window separator:first-child + headerbar,
+window separator:first-child + headerbar:backdrop,
+window separator:last-child + headerbar,
+window separator:last-child + headerbar:backdrop {
+  border-radius: 0;
+}
+
+window stack,
+window stack:backdrop {
+  border-radius: 0;
+}
+
+treeview.view.expander,
+treeview.view.expander:dir(rtl),
+treeview.view.expander:hover,
+treeview.view.expander:selected,
+treeview.view.expander:checked,
+treeview.view.expander:checked:selected,
+treeview.view.expander:checked:backdrop,
+treeview.view.expander:backdrop {
+  color: rgba(255,255,255,1);
+}
+
+treeview.view header button,
+treeview.view header button:backdrop {
+  background-color: rgba(0,0,0,0);
+}
+
+headerbar,
+headerbar:backdrop,
+.titlebar,
+.titlebar:backdrop {
+  background-color: rgba(0,0,0,0.6);
+  background-image: none;
+  border: transparent;
+  margin-bottom: -1px;
+}
+
+headerbar .linked,
+headerbar .linked:backdrop {
+    background-color: rgba(0,0,0,1);      /* transparent container */
+}
+
+
+window > *:not(decoration),
+window > *:not(decoration):backdrop {
+  border: transparent;
+}
+
+menu,
+.menu {
+  background-color: rgba(0,0,0,0.6);
+}
+
+headerbar * * * {
+  color: rgba(255,255,255,1);
+}
+headerbar *:backdrop *:backdrop *:backdrop {
+  color: rgba(255,255,255,1);
+}
+
+.default-decoration.titlebar:not(headerbar),
+headerbar.default-decoration,
+.default-decoration.titlebar:not(headerbar):backdrop,
+headerbar.default-decoration:backdrop {
+  padding: 4px;
+}
+

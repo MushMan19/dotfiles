@@ -1,0 +1,18 @@
+/* ── Rofi Config ──────────────────────────────
+   Location: ~/.config/rofi/config.rasi
+   Description: Basic configuration + theme import
+   ─────────────────────────────────────────── */
+
+configuration {
+    modi: "drun,run";                    // Available modes
+    show-icons: true;                    // Show app icons
+    matching: "fuzzy";
+    sorting-method: "fzf";
+    case-sensitive: false;
+    sort: true;
+    font: "JetBrainsMono Nerd Font Mono 9";  // Global font
+}
+
+/* Import active theme */
+@theme "~/.config/rofi/theme.rasi"
+
