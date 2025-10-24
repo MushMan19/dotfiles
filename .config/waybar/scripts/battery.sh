@@ -56,11 +56,11 @@ ascii_bar="[$bar$pad]"
 
 # Color thresholds
 if [ "$capacity" -lt 20 ]; then
-    fg="#bf616a"  # red
+    fg="#f7768e"  # red
 elif [ "$capacity" -lt 55 ]; then
-    fg="#fab387"  # orange
+    fg="#e0af68"  # orange
 else
-    fg="#56b6c2"  # cyan
+    fg="#CED7F2"  # cyan
 fi
 
 # Tooltip logic
@@ -76,4 +76,4 @@ fi
 percent_str=$(printf "%3d%%" "$capacity")
 
 # JSON output
-printf '%s\n' "{\"text\":\"<span font='Electroharmonix'><span foreground='$fg'>[ $icon ]</span></span>\",\"tooltip\":\"$tooltip\"}"
+printf '%s\n' "{\"text\":\"<span size='large'>[</span><span foreground='$fg'>$icon</span><span size='large'>]</span>\",\"tooltip\":\"$tooltip\"}"

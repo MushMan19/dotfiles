@@ -144,9 +144,9 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "[   ]",
+    "format-muted": "[ 󰝟 ]",
     "format-icons": {
-      "default": ["[  ]", "[   ]", "[    ]"]
+      "default": ["[ 📢 ]", "[ 󰖀 ]", "[ 󰕾 ]"]
     }
   },
 

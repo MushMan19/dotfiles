@@ -44,16 +44,24 @@ fi
 
 ascii_bar="[$bar$pad]"
 
-# Icon
-icon="󰛨"
+fg="#CED7F2"
 
 # Color thresholds
-if [ "$percent" -lt 20 ]; then
-  fg="#bf616a"  # red
-elif [ "$percent" -lt 55 ]; then
-  fg="#fab387"  # orange
+if [ "$percent" -lt 10 ]; then
+  # fg="#bf616a"  # red
+  icon="🌕"
+elif [ "$percent" -lt 25 ]; then
+  icon="🌔"
+  # fg="#fab387"  # orange
+elif [ "$percent" -lt 50 ]; then
+  icon="🌓"
+  # fg="#fab387"  # orange
+elif [ "$percent" -lt 90 ]; then
+  icon="🌒"
+  # fg="#fab387"  # orange
 else
-  fg="#56b6c2"  # cyan
+  icon="🌑"
+  # fg="#56b6c2"  # cyan
 fi
 
 # Device name (first field from brightnessctl --machine-readable)
@@ -66,4 +74,4 @@ tooltip="Brightness: $percent%\nDevice: $device"
 # Pad percentage to fixed width (3 digits)
 percent_str=$(printf "%3d%%" "$percent")
 
-printf '%s\n' "{\"text\":\"<span font='Electroharmonix'><span foreground='$fg'>[ $icon  ]</span></span>\",\"tooltip\":\"$tooltip\"}"
+printf '%s\n' "{\"text\":\"<span font='JetBrainsMono Nerd Font Mono' size='large'><span foreground='$fg'>[$icon]</span></span>\",\"tooltip\":\"$tooltip\"}"
