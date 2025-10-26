@@ -1,15 +1,14 @@
 // ──────────────────────────────────────────────────────────────────────────
-//  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
 //  Waybar config (config.jsonc)
 //  vers. 1.0.0
 // ──────────────────────────────────────────────────────────────────────────
 
 {
+  "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
+  "spacing": 0,
   "height": 26,
-  "margin-top": 0,
-  "margin-bottom": 0,
 
   // ── Layout ───────────────────────────────────────────────────────
   "modules-left": [
@@ -20,13 +19,12 @@
     "clock"
   ],
   "modules-right": [
-    "custom/asus-profile",
-    "pulseaudio",
     "bluetooth",
     "network",
-    "custom/microphone",
-    "custom/battery",
-    "custom/brightness"
+    "pulseaudio",
+    "cpu",
+    "battery",
+    "custom/asus-profile"
   ],
 
   // ── Workspaces ───────────────────────────────────────────────────
@@ -53,48 +51,63 @@
       "4": []
     }
   },
+  
+  // ── Power ────────────────────────────────────────────────────────
+  "custom/power": {
+    "format": "󰤆",
+    // "format": "<span>󰤆 </span>",
+    "tooltip": true,
+    "tooltip-format": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "󰍛",
+    "on-click": "alacritty --class=Btop -e btop"
+  },
 
   // ── Clock ────────────────────────────────────────────────────────
   "clock": {
-    "format": "[ {:L%A %H:%M} ]",
-    "format-alt": "[ {:L%d %B %Y} ]",
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%d %B %Y}",
     "tooltip": false
   },
 
   // ── Network ──────────────────────────────────────────────────────
   "network": {
-    "format-wifi": "[ {icon} ]",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
-    "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "󰀂 {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "alacritty --class=Nmtui -e nmtui",
-    "interval": 5
+    "interval": 3,
+    // "spacing": 1,
+    "on-click": "alacritty --class=Nmtui -e nmtui"
   },
 
   // ── Bluetooth ────────────────────────────────────────────────────
   "bluetooth": {
-    "format": "{icon}",
-    "format-icons": {
-      "enabled": "[  ]",
-      "disabled": "[ 󰂲 ]"
-    },
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
     "on-click": "alacritty --class=Bluetui -e bluetui",
     "on-click-right": "~/.config/waybar/scripts/bluetooth-toggle.sh",
-    "tooltip-format": "Bluetooth is {status}",
+    "tooltip-format": "Devices connected: {num_connections}",
     "interval": 5
   },
 
   // ── Microphone ───────────────────────────────────────────────────
-  "custom/microphone": {
-    "exec": "~/.config/waybar/scripts/mic.sh",
-    "interval": 1,
-    "tooltip": true,
-    "tooltip-format": "Mic Toggle",
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-  },
+  // "custom/microphone": {
+  //   "exec": "~/.config/waybar/scripts/mic.sh",
+  //   "interval": 1,
+  //   "tooltip": true,
+  //   "tooltip-format": "Mic Toggle",
+  //   "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  // },
 
   // ── Asus Profile ─────────────────────────────────────────────────
   "custom/asus-profile": {
@@ -107,31 +120,30 @@
   },
 
   // ── Battery ──────────────────────────────────────────────────────
-  "custom/battery": {
-    "exec": "~/.config/waybar/scripts/battery.sh",
-    "return-type": "json",
-    "interval": 10,
-    "on-click": "xfce4-power-manager-settings"
-  },
-
+  // "custom/battery": {
+  //   "exec": "~/.config/waybar/scripts/battery.sh",
+  //   "return-type": "json",
+  //   "interval": 10,
+  //   "on-click": "xfce4-power-manager-settings"
+  // },
 
   "battery": {
-    "format": "{icon}  {capacity}%",
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
     "format-icons": {
-      "charging": [
-        "󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂅"
-      ],
-      "default": [
-        "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
-      ]
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-    "format-full": "Charged ",
-    "interval": 5,
+    "format-full": "",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 10,
     "states": {
       "warning": 20,
       "critical": 10
-    },
-    "tooltip": true
+    }
   },
 
 
@@ -144,48 +156,41 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "[ 󰝟 ]",
+    "format-muted": "",
     "format-icons": {
-      "default": ["[ 📢 ]", "[ 󰖀 ]", "[ 󰕾 ]"]
+      "default": ["", "", ""]
     }
-  },
-
-  "custom/audio": {
-    "exec": "~/.config/waybar/scripts/volume.sh",
-    "return-type": "json",
-    "interval": 2,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "alacritty --class=Wiremix -e wiremix",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-
-  },
-  // ── Brightness ───────────────────────────────────────────────────
-  "custom/brightness": {
-    "exec": "~/.config/waybar/scripts/brightness.sh",
-    "return-type": "json",
-    "interval": 2,
-    "on-click": "~/.config/waybar/scripts/brightness-toggle.sh",
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-"
-  },
-
-  // ── VPN ──────────────────────────────────────────────────────────
-  "custom/vpn": {
-    "exec": "~/.config/waybar/scripts/nordvpn-status.sh",
-    "interval": 5,
-    "on-click": "~/.config/waybar/scripts/nordvpn-toggle.sh",
-    "format": "{}",
-    "markup": "pango",
-    "tooltip": true,
-    "tooltip-format": "VPN Status / Toggle"
-  },
-
-  // ── Power ────────────────────────────────────────────────────────
-  "custom/power": {
-    "format": "[ 󰤆 ]",
-    "tooltip": true,
-    "tooltip-format": "Power Menu",
-    "on-click": "~/.config/waybar/scripts/powermenu.sh"
   }
+
+  // "custom/audio": {
+  //   "exec": "~/.config/waybar/scripts/volume.sh",
+  //   "return-type": "json",
+  //   "interval": 2,
+  //   "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+  //   "on-click-right": "alacritty --class=Wiremix -e wiremix",
+  //   "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+  //   "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+  // },
+  
+  // ── Brightness ───────────────────────────────────────────────────
+  // "custom/brightness": {
+  //   "exec": "~/.config/waybar/scripts/brightness.sh",
+  //   "return-type": "json",
+  //   "interval": 2,
+  //   "on-click": "~/.config/waybar/scripts/brightness-toggle.sh",
+  //   "on-scroll-up": "brightnessctl set +5%",
+  //   "on-scroll-down": "brightnessctl set 5%-"
+  // }
+
+  // // ── VPN ──────────────────────────────────────────────────────────
+  // "custom/vpn": {
+  //   "exec": "~/.config/waybar/scripts/nordvpn-status.sh",
+  //   "interval": 5,
+  //   "on-click": "~/.config/waybar/scripts/nordvpn-toggle.sh",
+  //   "format": "{}",
+  //   "markup": "pango",
+  //   "tooltip": true,
+  //   "tooltip-format": "VPN Status / Toggle"
+  // }
+
 }

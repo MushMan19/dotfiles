@@ -32,7 +32,7 @@
   <property name="misc-use-csd" type="bool" value="true"/>
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="last-tabs-left" type="array">
-    <value type="string" value="file:///usr/share/sddm/themes/sddm-astronaut-theme/Themes"/>
+    <value type="string" value="file:///home/mush/.local/bin"/>
   </property>
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
@@ -41,4 +41,6 @@
   <property name="last-window-width" type="int" value="720"/>
   <property name="last-window-height" type="int" value="829"/>
   <property name="last-details-view-column-order" type="string" value="THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_SIZE_IN_BYTES,THUNAR_COLUMN_LOCATION,THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_TYPE,THUNAR_COLUMN_GROUP,THUNAR_COLUMN_MIME_TYPE,THUNAR_COLUMN_DATE_CREATED,THUNAR_COLUMN_OWNER,THUNAR_COLUMN_PERMISSIONS,THUNAR_COLUMN_DATE_ACCESSED,THUNAR_COLUMN_RECENCY,THUNAR_COLUMN_DATE_DELETED"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_DELETED"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_DESCENDING"/>
 </channel>

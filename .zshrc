@@ -132,3 +132,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 alias config='/usr/bin/git --git-dir=/home/mush/.cfg/ --work-tree=/home/mush'
+
+# Created by `pipx` on 2025-10-25 07:37:04
+export PATH="$PATH:/home/mush/.local/bin"
