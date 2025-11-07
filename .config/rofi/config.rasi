@@ -4,13 +4,14 @@
    ─────────────────────────────────────────── */
 
 configuration {
-    modi: "drun,run";                    // Available modes
+    modi: "drun,run,";                    // Available modes
     show-icons: true;                    // Show app icons
     matching: "fuzzy";
     sorting-method: "fzf";
     case-sensitive: false;
     sort: true;
-    font: "JetBrainsMono Nerd Font Mono 9";  // Global font
+    font: "JetBrainsMono Nerd Font 9";  // Global font
+    scroll-method: 1;
 }
 
 /* Import active theme */

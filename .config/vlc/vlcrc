@@ -86,6 +86,11 @@
 # Sync on Intra Frame (boolean)
 #packetizer-mpegvideo-sync-iframe=0
 
+[swscale] # Video scaling filter
+
+# Scaling mode (integer)
+#swscale-mode=2
+
 [blendbench] # Blending benchmark filter
 
 # Number of time to blend (integer)
@@ -403,6 +408,14 @@
 # Use motion sensors (boolean)
 #rotate-use-motion=0
 
+[postproc] # Video post processing filter
+
+# Post processing quality (integer)
+#postproc-q=6
+
+# FFmpeg post processing filter chains (string)
+#postproc-name=default
+
 [telx] # Teletext subtitles decoder
 
 # Override page (integer)
@@ -455,6 +468,131 @@
 
 # Quality level (integer)
 #sout-jpeg-quality=95
+
+[avcodec] # FFmpeg audio/video decoder
+
+# Direct rendering (boolean)
+#avcodec-dr=1
+
+# Show corrupted frames (boolean)
+#avcodec-corrupted=1
+
+# Error resilience (integer)
+#avcodec-error-resilience=1
+
+# Workaround bugs (integer)
+#avcodec-workaround-bugs=1
+
+# Hurry up (boolean)
+#avcodec-hurry-up=1
+
+# Skip frame (default=0) (integer)
+#avcodec-skip-frame=0
+
+# Skip idct (default=0) (integer)
+#avcodec-skip-idct=0
+
+# Allow speed tricks (boolean)
+#avcodec-fast=0
+
+# Skip the loop filter for H.264 decoding (integer)
+#avcodec-skiploopfilter=0
+
+# Debug mask (integer)
+#avcodec-debug=0
+
+# Codec name (string)
+#avcodec-codec=
+
+# Hardware decoding (string)
+#avcodec-hw=any
+
+# Threads (integer)
+#avcodec-threads=0
+
+# Advanced options (string)
+#avcodec-options=
+
+# Codec name (string)
+#sout-avcodec-codec=
+
+# Quality level (string)
+#sout-avcodec-hq=rd
+
+# Ratio of key frames (integer)
+#sout-avcodec-keyint=0
+
+# Ratio of B frames (integer)
+#sout-avcodec-bframes=0
+
+# Hurry up (boolean)
+#sout-avcodec-hurry-up=0
+
+# Interlaced encoding (boolean)
+#sout-avcodec-interlace=0
+
+# Interlaced motion estimation (boolean)
+#sout-avcodec-interlace-me=1
+
+# Video bitrate tolerance (integer)
+#sout-avcodec-vt=0
+
+# Pre-motion estimation (boolean)
+#sout-avcodec-pre-me=0
+
+# Rate control buffer size (integer)
+#sout-avcodec-rc-buffer-size=0
+
+# Rate control buffer aggressiveness (float)
+#sout-avcodec-rc-buffer-aggressivity=1.000000
+
+# I quantization factor (float)
+#sout-avcodec-i-quant-factor=0.000000
+
+# Noise reduction (integer)
+#sout-avcodec-noise-reduction=0
+
+# MPEG4 quantization matrix (boolean)
+#sout-avcodec-mpeg4-matrix=0
+
+# Minimum video quantizer scale (integer)
+#sout-avcodec-qmin=0
+
+# Maximum video quantizer scale (integer)
+#sout-avcodec-qmax=0
+
+# Trellis quantization (boolean)
+#sout-avcodec-trellis=0
+
+# Fixed quantizer scale (float)
+#sout-avcodec-qscale=3.000000
+
+# Strict standard compliance (integer)
+#sout-avcodec-strict=0
+
+# Luminance masking (float)
+#sout-avcodec-lumi-masking=0.000000
+
+# Darkness masking (float)
+#sout-avcodec-dark-masking=0.000000
+
+# Motion masking (float)
+#sout-avcodec-p-masking=0.000000
+
+# Border masking (float)
+#sout-avcodec-border-masking=0.000000
+
+# Luminance elimination (integer)
+#sout-avcodec-luma-elim-threshold=0
+
+# Chrominance elimination (integer)
+#sout-avcodec-chroma-elim-threshold=0
+
+# Specify AAC audio profile to use (string)
+#sout-avcodec-aac-profile=low
+
+# Advanced options (string)
+#sout-avcodec-options=
 
 [twolame] # Libtwolame audio encoder
 
@@ -822,6 +960,14 @@ qt-privacy-ask=0
 
 # Frame rate (string)
 #timecode-fps=25/1
+
+[avio] # libavformat AVIO access
+
+# Advanced options (string)
+#avio-options=
+
+# Advanced options (string)
+#sout-avio-options=
 
 [http] # HTTP input
 
@@ -1537,6 +1683,23 @@ qt-privacy-ask=0
 
 # Subtitle description (string)
 #sub-description=
+
+[avformat] # Avformat demuxer
+
+# Format name (string)
+#avformat-format=
+
+# Advanced options (string)
+#avformat-options=
+
+# Avformat mux (string)
+#sout-avformat-mux=
+
+# Advanced options (string)
+#sout-avformat-options=
+
+# Reset timestamps (boolean)
+#sout-avformat-reset-ts=1
 
 [h26x] # H264 video demuxer
 
@@ -2802,7 +2965,7 @@ qt-privacy-ask=0
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -3441,16 +3604,16 @@ metadata-network-access=1
 #key-zoom-double=Alt+4
 
 # Very short jump length (integer)
-#extrashort-jump-size=3
+extrashort-jump-size=1
 
 # Short jump length (integer)
-#short-jump-size=10
+short-jump-size=5
 
 # Medium jump length (integer)
-#medium-jump-size=60
+medium-jump-size=20
 
 # Long jump length (integer)
-#long-jump-size=300
+long-jump-size=60
 
 # Set playlist bookmark 1 (string)
 #global-key-set-bookmark1=

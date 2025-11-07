@@ -24,4 +24,3 @@ case "$profile" in
 esac
 
 echo "<span foreground='$fg' size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"
-

@@ -1,38 +1,49 @@
+
+
 window#osd {
   border-radius: 5px;
-  border: 2px;
-  background: #{"alpha(@theme_bg_color, 0.5)"};
+  border: 2px solid #CED7F2; /* main window border */
+  background: alpha(#111111, 0.7);
+}
 
-  #container {
-    margin: 16px;
-  }
+window#osd #container {
+  margin: 6px;
+  padding: 2px;
+  background: transparent;
+}
 
-  image,
-  label {
-    color: #{"@theme_fg_color"};
-  }
+window#osd image {
+  -gtk-icon-transform: scale(0.8);
+}
 
-  progressbar:disabled,
-  image:disabled {
-    opacity: 0.5;
-  }
+window#osd image,
+window#osd label {
+  color: #CED7F2; /* text and icon color */
+}
 
-  progressbar {
-    min-height: 6px;
-    border-radius: 999px;
-    background: transparent;
-    border: none;
-  }
-  trough {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #{"alpha(@theme_fg_color, 0.5)"};
-  }
-  progress {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #{"@theme_fg_color"};
-  }
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}
+
+window#osd progressbar {
+  margin-right: 6px;
+  min-height: 6px;
+  border-radius: 10px;
+  background: alpha(#CED7F2, 0.2); /* main prgress bar */
+  border: none;
+}
+
+window#osd trough { /*  prgress bar empty */
+  min-height: inherit;
+  border-radius: inherit;
+  border: transparent;
+  background: transparent;
+}
+
+window#osd progress { /*  prgress bar filled */
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: #CED7F2;
 }

@@ -128,7 +128,7 @@
   // },
 
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-discharging": "{icon}",
     "format-charging": "{icon}",
     "format-plugged": "",

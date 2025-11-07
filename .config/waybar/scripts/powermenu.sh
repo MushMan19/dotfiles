@@ -7,7 +7,7 @@
 #      # Opens a Rofi menu with power options
 # ─────────────────────────────────────────────────────────────────────────────
 
-rofi_command="rofi -dmenu -p Power"
+rofi_command="rofi -dmenu -p Power -no-show-icons"
 
 options="Shutdown\nReboot\nLogout\nSuspend\nLock"
 
@@ -17,6 +17,6 @@ case $chosen in
     Reboot) systemctl reboot ;;
     Logout) hyprctl dispatch exit ;;
     Suspend) systemctl suspend ;;
-    Lock) ~/.config/hyprlock/lock.sh ;;
+    Lock) hyprlock ;;
 esac
 

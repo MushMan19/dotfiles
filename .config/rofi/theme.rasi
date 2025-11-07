@@ -1,3 +1,7 @@
+/* Dark theme. */
+/*@import "~/.cache/wal/colors-rofi-dark"*/
+
+
 /* Global defaults */
 * {
   font: "JetBrainsMono Nerd Font Mono 10";
@@ -9,8 +13,8 @@
 
 /* ── Window ──────────────────────────────── */
 window {
-  width: 720px;
-  height: 575px;
+  width: 765px;
+  height: 410px;
   location: center;
   blur: true;
   border: 2px;
@@ -23,14 +27,14 @@ window {
 /* ── Layout ──────────────────────────────── */
 mainbox {
   orientation: horizontal;
-  children: [ "borderbox" ];
+  children: [ "imagebox", "borderbox"];
   spacing: 0px;
   padding: 0px;
 }
 
 borderbox {
   orientation: horizontal;
-  children: [ "imagebox", "contentbox" ];
+  children: [ "contentbox" ];
   padding: 0px;
   spacing: 0px;
   border-radius: 3px;
@@ -46,9 +50,9 @@ contentbox {
 
 /* ── Imagebox ────────────────────────────── */
 imagebox {
-  background-image: url("~/.config/rofi/image1.jpg");
+  background-image: url("~/.config/rofi/image3.jpg");
   background-repeat: false;
-  size: 1000px 625px;
+  size: 750px 750px;
 }
 
 /* ── Elements ────────────────────────────── */
@@ -65,7 +69,7 @@ element-text, element-icon {
 element selected {
   background-color: rgba(0, 0, 0, 0.5);
   text-color: #CED7F2;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 /* ── Input & Prompt ──────────────────────── */
@@ -79,7 +83,7 @@ prompt {
 entry {
   padding: 8px;
   expand: false;
-  font: "JetBrainsMono Nerd Font Mono 10";
+  font: "JetBrainsMono Nerd Font 10";
   text-color: #CED7F2;
   border-radius: 0px 3px 0px 0px;
   background-color: rgba(0, 0, 0, 0.5);  // input field
@@ -89,7 +93,7 @@ entry {
 listview {
   lines: 1;
   background-color: rgba(0, 0, 0, 0.5); // solid background inside blur
-  border-radius: 0px 0px 3px 0px;
+  border-radius: 0px 0px 5px 0px;
   padding: 5px;
 }
 

@@ -2,7 +2,19 @@
 #    ~/.config/neofetch/animated-neofetch.sh 0.05
 #   clear
 # fi
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+# (cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+# cat ~/.cache/wal/sequences
+
+
 fastfetch
+
+
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -104,6 +116,8 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -135,3 +149,14 @@ alias config='/usr/bin/git --git-dir=/home/mush/.cfg/ --work-tree=/home/mush'
 
 # Created by `pipx` on 2025-10-25 07:37:04
 export PATH="$PATH:/home/mush/.local/bin"
+export NEWT_COLORS='
+window=black,black
+border=white,black
+shadow=black,gray
+title=white,black
+textbox=white,black
+button=black,black
+actbutton=white,black
+
+'
+
