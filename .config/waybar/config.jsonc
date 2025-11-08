@@ -24,6 +24,7 @@
     "pulseaudio",
     "cpu",
     "battery",
+    "mpris",
     "custom/asus-profile"
   ],
 
@@ -160,7 +161,24 @@
     "format-icons": {
       "default": ["", "", ""]
     }
+  },
+  "mpris": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "{artist} - {title}",
+    // "format-paused": " {artist} - {title}",
+    // "format-playing": " {artist} - {title}",
+    // "tooltip-paused": " {artist} - {title}",
+    // "tooltip-playing": " {artist} - {title}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "interval": 2
   }
+
+
+
+  
 
   // "custom/audio": {
   //   "exec": "~/.config/waybar/scripts/volume.sh",

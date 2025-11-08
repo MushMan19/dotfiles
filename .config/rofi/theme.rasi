@@ -1,5 +1,5 @@
 /* Dark theme. */
-/*@import "~/.cache/wal/colors-rofi-dark"*/
+/*@import "~/.cache/wal/colors-rofi-dark" */
 
 
 /* Global defaults */
@@ -67,7 +67,7 @@ element-text, element-icon {
 }
 
 element selected {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 15, 30, 0.8);
   text-color: #CED7F2;
   border-radius: 5px;
 }
