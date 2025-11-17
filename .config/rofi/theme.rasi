@@ -86,13 +86,13 @@ entry {
   font: "JetBrainsMono Nerd Font 10";
   text-color: #CED7F2;
   border-radius: 0px 3px 0px 0px;
-  background-color: rgba(0, 0, 0, 0.5);  // input field
+  background-color: rgba(7, 11, 26, 0.5);  // input field
 }
 
 /* ── Listview ────────────────────────────── */
 listview {
   lines: 1;
-  background-color: rgba(0, 0, 0, 0.5); // solid background inside blur
+  background-color: rgba(7, 11, 26, 0.5); // solid background inside blur
   border-radius: 0px 0px 5px 0px;
   padding: 5px;
 }

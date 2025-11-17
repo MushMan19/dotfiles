@@ -160,3 +160,5 @@ actbutton=white,black
 
 '
 
+
+export PATH=$PATH:/home/mush/.spicetify

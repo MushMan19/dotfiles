@@ -3,7 +3,7 @@
 window#osd {
   border-radius: 5px;
   border: 2px solid #CED7F2; /* main window border */
-  background: alpha(#111111, 0.7);
+  background: alpha(#070b1a, 0.7);
 }
 
 window#osd #container {

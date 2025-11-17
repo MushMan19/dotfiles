@@ -1,32 +1,37 @@
 [colors]
+
 [colors.primary]
-background = '#111111'
-foreground = '#CED7F2'
+background = '#0A0F26'   # deeper, uniform indigo
+foreground = '#CED7F2'   # soft ice text
 
-# Normal colors
+# ----------------------------------------
+# NORMAL COLORS (blue/purple/teal family)
+# ----------------------------------------
 [colors.normal]
-black = '#32344a'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#ad8ee6'
-cyan = '#449dab'
-white = '#787c99'
+black   = '#131b40'   # theme dark
+red     = '#c76b8b'   # bluish-rose instead of harsh red
+green   = '#7ecfa8'   # teal-leaning green fits the cool spectrum
+yellow  = '#f2ce69'   # desaturated gold, not warm orange
+blue    = '#6f9bff'   # clean cool blue
+magenta = '#a78ce9'   # soft lavender-pink
+cyan    = '#60b7d6'   # cool cyan but not neon
+white   = '#d5dbf7'   # cool off-white
 
-# Bright colors
+# ----------------------------------------
+# BRIGHT COLORS (still same hue family)
+# ----------------------------------------
 [colors.bright]
-black = '#444b6a'
-red = '#ff7a93'
-green = '#b9f27c'
-yellow = '#ff9e64'
-blue = '#7da6ff'
-magenta = '#bb9af7'
-cyan = '#0db9d7'
-white = '#acb0d0'
+black   = '#1c264f'
+red     = '#da7fa0'   # brighter rose-purple
+green   = '#8ff5c2'   # minty teal, readable
+yellow  = '#e5cc8f'
+blue    = '#88adff'
+magenta = '#bfa2ff'
+cyan    = '#7bd2ef'
+white   = '#ffffff'   # pure white for emphasis
 
 [colors.selection]
-background = '#7aa2f7'
+background = '#243060'  # harmonious mid-indigo
 
 [env]
 TERM = "xterm-256color"
@@ -49,7 +54,6 @@ style = "Italic"
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
-
 
 [window]
 padding.x = 15

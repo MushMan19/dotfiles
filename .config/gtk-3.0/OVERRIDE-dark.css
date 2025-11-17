@@ -41,7 +41,7 @@
 
 .background,
 .background:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 window,
@@ -57,7 +57,7 @@ decoration:backdrop {
   margin: 0;
   box-shadow: none;
   border-radius: 2px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 button,
@@ -72,7 +72,7 @@ button.sidebar-button:backdrop {
 
 button.suggested-action,
 button.suggested-action:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 button:disabled {
@@ -90,7 +90,7 @@ button * {
 
 dialog.background,
 dialog.background:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 /* Gedit / VTE terminals */
@@ -112,7 +112,7 @@ notebook tab:checked label:backdrop {
 
 vte-terminal,
 vte-terminal:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 label,
@@ -178,7 +178,7 @@ paned > separator:backdrop {
 
 .app-notification,
 .app-notification:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
 }
 
 window headerbar:first-child,
@@ -219,7 +219,7 @@ headerbar,
 headerbar:backdrop,
 .titlebar,
 .titlebar:backdrop {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(10, 15, 38, 0.5);
   background-image: none;
   border: transparent;
   margin-bottom: -1px;
@@ -238,7 +238,7 @@ window > *:not(decoration):backdrop {
 
 menu,
 .menu {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(7, 11, 26, 0.5);
 }
 
 headerbar * * * {

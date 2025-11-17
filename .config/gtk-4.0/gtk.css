@@ -6,7 +6,7 @@ widget text/foreground color */
 @define-color theme_fg_color_breeze #fcfcfc;
 /*
 text color for entries, views and content in general */
-@define-color theme_text_color_breeze #fcfcfc;
+@define-color theme_text_color_breeze #000000;
 /*
 widget base background color */
 @define-color theme_bg_color_breeze #2a2e32;
