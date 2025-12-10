@@ -149,16 +149,13 @@ alias config='/usr/bin/git --git-dir=/home/mush/.cfg/ --work-tree=/home/mush'
 
 # Created by `pipx` on 2025-10-25 07:37:04
 export PATH="$PATH:/home/mush/.local/bin"
-export NEWT_COLORS='
-window=black,black
-border=white,black
-shadow=black,gray
-title=white,black
-textbox=white,black
-button=black,black
-actbutton=white,black
-
-'
 
 
 export PATH=$PATH:/home/mush/.spicetify
+
+# bun completions
+[ -s "/home/mush/.bun/_bun" ] && source "/home/mush/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
