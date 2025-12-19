@@ -1,69 +1,37 @@
+[general]
+import = ["~/.cache/theme/alacritty-colors.toml"]
+live_config_reload = true
+
 [colors]
-
-[colors.primary]
-background = '#0A0F26'   # deeper, uniform indigo
-foreground = '#CED7F2'   # soft ice text
-
-# ----------------------------------------
-# NORMAL COLORS (blue/purple/teal family)
-# ----------------------------------------
-[colors.normal]
-black   = '#131b40'   # theme dark
-red     = '#c76b8b'   # bluish-rose instead of harsh red
-green   = '#7ecfa8'   # teal-leaning green fits the cool spectrum
-yellow  = '#f2ce69'   # desaturated gold, not warm orange
-blue    = '#6f9bff'   # clean cool blue
-magenta = '#a78ce9'   # soft lavender-pink
-cyan    = '#60b7d6'   # cool cyan but not neon
-white   = '#d5dbf7'   # cool off-white
-
-# ----------------------------------------
-# BRIGHT COLORS (still same hue family)
-# ----------------------------------------
-[colors.bright]
-black   = '#1c264f'
-red     = '#da7fa0'   # brighter rose-purple
-green   = '#8ff5c2'   # minty teal, readable
-yellow  = '#e5cc8f'
-blue    = '#88adff'
-magenta = '#bfa2ff'
-cyan    = '#7bd2ef'
-white   = '#ffffff'   # pure white for emphasis
-
-[colors.selection]
-background = '#243060'  # harmonious mid-indigo
-
-[env]
-TERM = "xterm-256color"
+# nothing here; will be overridden by import
 
 [font]
 size = 9
-
-[font.bold]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font Mono"
-style = "Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
 [window]
 padding.x = 15
 padding.y = 15
 decorations = "None"
-
 opacity = 0.5
 blur = true
 
 [keyboard]
 bindings = [
-{ key = "F11", action = "ToggleFullscreen" }
+  { key = "F11", action = "ToggleFullscreen" }
 ]

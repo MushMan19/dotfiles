@@ -1,9 +1,11 @@
+@import "../../.cache/theme/waybar-colors.css";
+
 /* ───────────────────────────────────────────────
    Global styles
 ──────────────────────────────────────────────── */
 * {
-    background-color: #0A0F26;
-    color: #CED7F2;
+    background-color: @background;
+    color: @foreground;
     border: none;
     border-radius: 0;
     min-height: 0;
@@ -41,12 +43,12 @@ window#waybar {
 
 #workspaces button.focused {
     background-color: #444;
-    border-bottom: 2px solid #CED7F2;
+    border-bottom: 2px solid @foreground;
 }
 
 #workspaces button.urgent {
-    background-color: #d9534f;
-    color: #fff;
+    background-color: @color1;
+    color: @foreground;
 }
 
 /* ───────────────────────────────────────────────
@@ -83,6 +85,6 @@ window#waybar {
 }
 
 @keyframes blink {
-    from { background-color: #d9534f; color: #CED7F2; }
-    to   { background-color: #CED7F2; color: #d9534f; }
+    from { background-color: @color1; color: @foreground; }
+    to   { background-color: @background; color: @color1; }
 }

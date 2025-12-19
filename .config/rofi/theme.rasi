@@ -1,6 +1,4 @@
-/* Dark theme. */
-/*@import "~/.cache/wal/colors-rofi-dark" */
-
+@import "/home/mush/.cache/theme/rofi_colors/colors.rasi"
 
 /* Global defaults */
 * {
@@ -19,7 +17,7 @@ window {
   blur: true;
   border: 2px;
   border-radius: 5px;
-  border-color: #CED7F2;
+  border-color: @foreground;
   background-color: transparent;  // let Hyprland handle opacity
   padding: 0px;
 }
@@ -50,7 +48,7 @@ contentbox {
 
 /* ── Imagebox ────────────────────────────── */
 imagebox {
-  background-image: url("~/.config/rofi/image3.jpg");
+  background-image: url("~/.cache/theme/rofi_colors/rofi_image.png", height);
   background-repeat: false;
   size: 750px 750px;
 }
@@ -63,12 +61,12 @@ element {
 element-text, element-icon {
   padding: 6px 8px;
   spacing: 2px;
-  text-color: #CED7F2;
+  text-color: @foreground;
 }
 
 element selected {
-  background-color: rgba(10, 15, 30, 0.8);
-  text-color: #CED7F2;
+  background-color: @background80;
+  text-color: @foreground;
   border-radius: 5px;
 }
 
@@ -84,16 +82,15 @@ entry {
   padding: 8px;
   expand: false;
   font: "JetBrainsMono Nerd Font 10";
-  text-color: #CED7F2;
+  text-color: @foreground;
   border-radius: 0px 3px 0px 0px;
-  background-color: rgba(7, 11, 26, 0.5);  // input field
+  background-color: @background50;  // input field
 }
 
 /* ── Listview ────────────────────────────── */
 listview {
   lines: 1;
-  background-color: rgba(7, 11, 26, 0.5); // solid background inside blur
+  background-color: @background50; // solid background inside blur
   border-radius: 0px 0px 5px 0px;
   padding: 5px;
 }
-
