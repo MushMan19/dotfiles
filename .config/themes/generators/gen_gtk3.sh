@@ -7,7 +7,7 @@ set -eu
 [[ $# -eq 1 ]] || { echo "Usage: $0 theme.json"; exit 1; }
 
 THEME_JSON="$1"
-GTK_CACHE_DIR="$HOME/.cache/themes/gtk_colors"
+GTK_CACHE_DIR="$HOME/.cache/theme"
 mkdir -p "$GTK_CACHE_DIR"
 
 GTK_FILE="$GTK_CACHE_DIR/gtk_colors.css"

@@ -6,21 +6,19 @@
 # ──────────────────────────────────────────────────────────  
 
 profile=$(asusctl profile -p | awk '/Active profile/ {print $NF}')
-
 text="󱓻"
+
 case "$profile" in
   Performance)
-    fg="#bf616a"
+    echo "<span foreground='#bf616a' size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"
     ;;
   Balanced)
-    fg="#fab387"
+    echo "<span foreground='#fab387' size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"
     ;;
   Quiet)
-    fg="#CED7F2"
+    echo "<span size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"
     ;;
   *)
-    fg="#ffffff"
+    echo "<span size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"
     ;;
 esac
-
-echo "<span foreground='$fg' size='large' font='JetBrainsMono Nerd Font Mono'>$text</span>"

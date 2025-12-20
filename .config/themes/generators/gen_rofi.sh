@@ -23,7 +23,7 @@ hexToRgb() {
 # Extract main colors
 BACKGROUND=$(jq -r '.special.background' "$THEME_JSON")
 FOREGROUND=$(jq -r '.special.foreground' "$THEME_JSON")
-ACCENT=$(jq -r '.colors.color11' "$THEME_JSON")
+ACCENT=$(jq -r '.colors.color1' "$THEME_JSON")
 SECONDARY=$(jq -r '.colors.color8' "$THEME_JSON")
 WALLPAPER=$(jq -r '.wallpaper' "$THEME_JSON")
 

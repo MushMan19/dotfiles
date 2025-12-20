@@ -66,7 +66,7 @@ element-text, element-icon {
 
 element selected {
   background-color: @background80;
-  text-color: @foreground;
+  text-color: @accent;
   border-radius: 5px;
 }
 

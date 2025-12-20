@@ -2,7 +2,7 @@
 set -eu
 
 THEME_JSON="$1"
-OUT_DIR="$HOME/.cache/themes"
+OUT_DIR="$HOME/.cache/theme"
 OUT_FILE="$OUT_DIR/swayosd_colors.css"
 
 mkdir -p "$OUT_DIR"
