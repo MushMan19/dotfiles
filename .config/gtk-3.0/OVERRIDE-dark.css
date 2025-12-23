@@ -1,10 +1,11 @@
+@import url("../../.cache/theme/gtk3_colors.css");
 
 @define-color theme_base_color rgba(0,0,0,0);
 @define-color theme_unfocused_base_color rgba(0,0,0,0);
 @define-color insensitive_base_color rgba(0,0,0,0);
 
 @define-color theme_bg_color rgba(0,128,255,0.5);
-@define-color theme_unfocused_bg_color rgba(0,128,255,0.5);
+@define-color theme_unfocused_bg_color @gtk_bg_50;
 @define-color insensitive_bg_color rgba(0,128,255,0.5);
 @define-color theme_selected_bg_color rgba(0,128,255,0.5);
 @define-color theme_unfocused_selected_bg_color rgba(0,128,255,0);
@@ -41,7 +42,7 @@
 
 .background,
 .background:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50; /* background-color*/
 }
 
 window,
@@ -57,7 +58,7 @@ decoration:backdrop {
   margin: 0;
   box-shadow: none;
   border-radius: 2px;
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50; /* drop-down menu background color*/
 }
 
 button,
@@ -72,7 +73,7 @@ button.sidebar-button:backdrop {
 
 button.suggested-action,
 button.suggested-action:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50;
 }
 
 button:disabled {
@@ -90,7 +91,7 @@ button * {
 
 dialog.background,
 dialog.background:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50;
 }
 
 /* Gedit / VTE terminals */
@@ -112,7 +113,7 @@ notebook tab:checked label:backdrop {
 
 vte-terminal,
 vte-terminal:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50;
 }
 
 label,
@@ -135,7 +136,7 @@ label:disabled:backdrop {
 textview text,
 textview text:backdrop {
   background-color: rgba(0,0,0,0);
-  color: rgba(255,255,255,1);
+  color: rgba(255,255,255,1); /* main text color */
 }
 
 iconview,
@@ -178,7 +179,7 @@ paned > separator:backdrop {
 
 .app-notification,
 .app-notification:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50;
 }
 
 window headerbar:first-child,
@@ -219,7 +220,7 @@ headerbar,
 headerbar:backdrop,
 .titlebar,
 .titlebar:backdrop {
-  background-color: rgba(10, 15, 38, 0.5);
+  background-color: @gtk_bg_50;
   background-image: none;
   border: transparent;
   margin-bottom: -1px;
@@ -238,7 +239,7 @@ window > *:not(decoration):backdrop {
 
 menu,
 .menu {
-  background-color: rgba(7, 11, 26, 0.5);
+  background-color: @gtk_bg_50;
 }
 
 headerbar * * * {
