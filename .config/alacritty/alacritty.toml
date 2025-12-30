@@ -28,7 +28,7 @@ style = "Bold Italic"
 padding.x = 15
 padding.y = 15
 decorations = "None"
-opacity = 0.5
+opacity = 0.6
 blur = true
 
 [keyboard]

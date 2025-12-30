@@ -2,8 +2,8 @@
 
 window#osd {
   border-radius: 5px;
-  border: 2px solid @osd_fg; /* main window border */
-  background: @osd_bg_70;
+  border: 2px solid @fg; /* main window border */
+  background: @bg_70;
 }
 
 window#osd #container {
@@ -18,7 +18,7 @@ window#osd image {
 
 window#osd image,
 window#osd label {
-  color: @osd_fg; /* text and icon color */
+  color: @fg; /* text and icon color */
 }
 
 window#osd progressbar:disabled,
@@ -30,7 +30,7 @@ window#osd progressbar {
   margin-right: 6px;
   min-height: 6px;
   border-radius: 10px;
-  background: @osd_fg_20; /* main prgress bar */
+  background: @fg_20; /* main prgress bar */
   border: none;
 }
 
@@ -45,5 +45,5 @@ window#osd progress { /*  prgress bar filled */
   min-height: inherit;
   border-radius: inherit;
   border: none;
-  background: @osd_fg; /* progress bar fill color */
+  background: @fg; /* progress bar fill color */
 }

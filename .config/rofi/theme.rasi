@@ -1,4 +1,4 @@
-@import "/home/mush/.cache/theme/rofi_colors/colors.rasi"
+@import "../../.cache/theme/rofi_colors/colors.rasi"
 
 /* Global defaults */
 * {
@@ -17,7 +17,7 @@ window {
   blur: true;
   border: 2px;
   border-radius: 5px;
-  border-color: @foreground;
+  border-color: @fg;
   background-color: transparent;  // let Hyprland handle opacity
   padding: 0px;
 }
@@ -61,11 +61,11 @@ element {
 element-text, element-icon {
   padding: 6px 8px;
   spacing: 2px;
-  text-color: @foreground;
+  text-color: @fg;
 }
 
 element selected {
-  background-color: @background80;
+  background-color: @bg80;
   text-color: @accent;
   border-radius: 5px;
 }
@@ -82,15 +82,15 @@ entry {
   padding: 8px;
   expand: false;
   font: "JetBrainsMono Nerd Font 10";
-  text-color: @foreground;
+  text-color: @fg;
   border-radius: 0px 3px 0px 0px;
-  background-color: @background50;  // input field
+  background-color: @bg50;  // input field
 }
 
 /* ── Listview ────────────────────────────── */
 listview {
   lines: 1;
-  background-color: @background50; // solid background inside blur
+  background-color: @bg50; // solid background inside blur
   border-radius: 0px 0px 5px 0px;
   padding: 5px;
 }

@@ -4,8 +4,8 @@
    Global styles
 ──────────────────────────────────────────────── */
 * {
-    background-color: @background;
-    color: @foreground;
+    background-color: @bg;
+    color: @fg;
     border: none;
     border-radius: 0;
     min-height: 0;
@@ -80,11 +80,11 @@ window#waybar {
    Battery states
 ──────────────────────────────────────────────── */
 #battery.critical:not(.charging) {
-    color: #d9534f;
+    color: @error;
     animation: blink 1s linear infinite alternate;
 }
 
 @keyframes blink {
-    from { background-color: @color1; color: @foreground; }
-    to   { background-color: @background; color: @color1; }
+    from { background-color: @accent; color: @fg; }
+    to   { background-color: @bg; color: @accent; }
 }

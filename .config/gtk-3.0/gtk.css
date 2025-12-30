@@ -8,7 +8,7 @@ text color for entries, views and content in general */
 @define-color theme_text_color_breeze #fcfcfc;
 /*
 widget base background color */
-@define-color theme_bg_color_breeze @gtk_bg_50  ; /* top header bar color*/
+@define-color theme_bg_color_breeze @bg_50  ; /* top header bar color*/
 /*
 text widgets and the like base background color */
 @define-color theme_base_color_breeze #1b1e20;
@@ -53,7 +53,7 @@ text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color_breeze #fcfcfc;
 /*
 widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color_breeze @gtk_bg_50;
+@define-color theme_unfocused_bg_color_breeze @bg_50;
 /*
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color_breeze #1b1e20;

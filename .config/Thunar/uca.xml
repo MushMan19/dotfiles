@@ -13,14 +13,14 @@
 	<directories/>
 </action>
 <action>
-	<icon></icon>
-	<name>Open thunar as Root</name>
+	<icon>com.github.philip-scott.wallpaperize</icon>
+	<name>Use as Theme</name>
 	<submenu></submenu>
-	<unique-id>1762338521898187-1</unique-id>
-	<command>pkexec thunar %F</command>
-	<description></description>
+	<unique-id>1767102981575991-1</unique-id>
+	<command>theme-switch -i %d/%n -n %n</command>
+	<description>Use as the wallpaper and set the desktop theme to match this background</description>
 	<range>*</range>
 	<patterns>*</patterns>
-	<directories/>
+	<image-files/>
 </action>
 </actions>
