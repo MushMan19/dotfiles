@@ -32,7 +32,7 @@
   <property name="misc-use-csd" type="bool" value="true"/>
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="last-tabs-left" type="array">
-    <value type="string" value="file:///home/mush/.config"/>
+    <value type="string" value="file:///home/mush/.cache/theme/rofi_colors"/>
   </property>
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
