@@ -21,6 +21,7 @@
 	<description>Use as the wallpaper and set the desktop theme to match this background</description>
 	<range>*</range>
 	<patterns>*</patterns>
+	<startup-notify/>
 	<image-files/>
 </action>
 </actions>

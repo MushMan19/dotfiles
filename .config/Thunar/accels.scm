@@ -71,6 +71,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/remove-from-recent" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open-with-other" "")
 (gtk_accel_path "<Actions>/ThunarActions/uca-action-1767102981575991-1" "<Primary><Alt>l")
+(gtk_accel_path "<Actions>/ThunarActions/uca-action-1759786102959957-1" "<Primary>Return")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/invert-selection" "<Primary><Shift>i")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-shortcuts" "<Primary>b")
 ; (gtk_accel_path "<Actions>/ThunarWindow/reload-alt-2" "Reload")
