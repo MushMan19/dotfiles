@@ -17,7 +17,7 @@
 	<name>Use as Theme</name>
 	<submenu></submenu>
 	<unique-id>1767102981575991-1</unique-id>
-	<command>theme-switch generate -i %d/%n -n %n &amp;&amp; theme-switch apply -n %n</command>
+	<command>theme-switch generate -i %f -n %n &amp;&amp; theme-switch apply -n %n</command>
 	<description>Use as the wallpaper and set the desktop theme to match this background</description>
 	<range>*</range>
 	<patterns>*</patterns>

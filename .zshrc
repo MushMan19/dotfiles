@@ -13,6 +13,7 @@
 
 
 fastfetch
+export PATH="$HOME/.pyenv/bin:$PATH"
 
 
 
